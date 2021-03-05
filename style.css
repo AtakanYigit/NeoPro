@@ -160,9 +160,9 @@ nav{
 
 #languageButtonText{
     color:                  var(--white);
-    position:               relative;
-    top:                    5px;
-    left:                   10px;
+    position:               absolute;
+    bottom:                 9px;
+    right:                  13px;
 }
 
 #languageButton:hover{
