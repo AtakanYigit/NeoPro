@@ -1,0 +1,574 @@
+/* ---General--- */
+:root {
+    --white:                #fbfbfb;
+    --black:                #121212;
+    --orange:               #ff7300;
+}
+
+*{
+    margin:                 0;
+    padding:                0;
+    box-sizing:             border-box;
+}
+
+a{
+    text-decoration:        none;
+    color:                  var(--black);
+}
+
+html{
+    font-family:           "Poppins";
+    overflow-x:             hidden;
+    background-color:       var(--white);
+    font-size:              16px;
+}
+
+::-moz-selection {
+     background:            var(--orange); 
+     color:                 var(--white);
+}
+::selection { 
+    background:             var(--orange); 
+    color:                  var(--white);
+}
+
+/* ---Navbar--- */
+
+nav{
+    width:                  100vw;
+    height:                 88px;
+    display:                flex;
+    justify-content:        center;
+    align-items:            center;
+    background-color:       transparent;
+    position:               fixed;
+    left:                   0;
+    right:                  0;
+    top:                    0;
+    margin:                 0 auto;
+    z-index:                999;
+    transition:             background-color .3s, box-shadow 0.6s;
+}
+
+.navbar{
+    margin:                 0 auto;
+    display:                flex;
+    flex-direction:         row;
+    flex-wrap:              none;
+    align-items:            center;
+    justify-content:        space-between;
+    width:                  83.4vw;
+    color:                  var(--black);
+    transition:             all 0.3s;
+}
+
+.navbarLogo{
+    display:                flex;
+    align-items:            center;
+    justify-content:        flex-start;
+    gap:                    8px;
+}
+
+.navbarLogoImg{
+    width:                  48px;
+}
+
+.navbarLogoImg img{
+    width:                  48px;
+}
+
+.navbarLogoText{
+    font-size:              2rem;
+    font-weight:            400;
+}
+
+.navItems{
+    display:                flex;
+    gap:                    4vw;
+    margin-right:           -32px;
+}
+
+.navItem{
+    font-size:              1.5rem;
+    font-weight:            300;
+    position:               relative;
+}
+
+.navItem::after{
+    background:             none repeat scroll 0 0 transparent;
+    bottom:                -10px;
+    content:                "";
+    display:                block;
+    height:                 3px;
+    left:                   50%;
+    position:               absolute;
+    background:             var(--orange);
+    transition:             all 0.3s;
+    width:                  0;
+}
+
+.navItem:hover::after{ 
+    width:                  80%; 
+    left:                   10%; 
+}
+
+.callNow{
+    color:                  var(--orange);
+    position:               relative;
+    left:                   0;
+    white-space:            nowrap;
+    margin:                 0;
+    transition:             all 0.3s;
+}
+
+.callNow::after{
+    display: none;
+}
+
+.callNowGroup{
+    width:                  223px;
+    display:                flex;
+    justify-content:        flex-end;
+    align-items:            center;
+    gap:                    12px;
+}
+
+.callNowIcon{
+    display:                inline;
+    position:               relative;
+    opacity:                0;
+    left:                   32px;
+    transition:             all 0.3s;
+}
+
+.callNowGroup:hover .callNowIcon{
+    opacity:                1;
+    left:                   16px;
+}
+
+.callNowGroup:hover .navItem{
+    opacity:                1;
+    margin-left:            16px;
+    margin-right:          -16px;
+}
+
+/* ---Language Button--- */
+
+#languageButton{
+    position:               fixed;
+    opacity:                0.6;
+    background-color:       var(--orange);
+    bottom:                 32px;
+    right:                  32px;
+    width:                  44px;
+    height:                 44px;
+    border-radius:          100%;
+    transition:             opacity 0.5s;
+    display:                flex;
+    justify-content:        center;
+    align-items:            center;
+}
+
+#languageButtonText{
+    color:                  var(--white);
+    font-size:              1.25rem;
+    margin:                 0;
+    padding:                0;
+    width:                  23px;
+}
+
+#languageButton:hover{
+    opacity:                1;
+}
+
+/* Footer */
+
+footer{
+    background-color:       var(--black);
+    color:                  var(--white);
+    margin-top:             200px;
+    padding:                32px 16px 64px 16px;
+    display:                grid;
+    width:                  100vw;
+    grid-template-columns:  1fr 1fr 1fr;
+}
+
+h6{
+    font-size:              1.75rem;
+    font-weight:            400;
+    margin-bottom:          16px;
+}
+
+h6::after{
+    position:               relative;
+    background:             none repeat scroll 0 0 transparent;
+    content:                "";
+    display:                block;
+    width:                  100%;
+    height:                 3px;
+    bottom:                 0;
+    background:             var(--orange);
+    transition:             all 0.3s;
+}
+
+h6:hover::after{
+    left:                   0;
+    width:                  99%;
+}
+
+.footerSection p{
+    font-size:              1.25rem;
+    font-weight:            300;
+}
+
+.footerSection{
+    display:                flex;
+    flex-direction:         column;
+    width:                  100%;
+    align-items:            flex-start;
+}
+
+.footerSection:first-of-type div{
+    display:                flex;
+    justify-content:        flex-start;
+    align-items:            center;
+    max-width:              33vw
+}
+
+.footerContactInfo{
+    display:                block;
+    font-size:              1.75rem;
+    font-weight:            300;
+    color:                  var(--white);
+    transition:             all 0.15s ease-in-out;
+}
+
+.footerContactInfo:hover{
+    color:                  #FF6F00;
+}
+
+.footerLogo{
+    display:                inline;
+    margin-top:            -24px;
+}
+
+.footerLogoText{
+    white-space:            nowrap;
+    margin:                 0;
+    margin-top:             -16px;
+}
+
+.footerMenuSection{
+    display:                flex;
+    flex-direction:         column;
+    align-items:            center;
+}
+
+.footerMenuSection a{
+    font-size:              1.75rem;
+    font-weight:            300;
+    color:                  var(--white);
+    margin-bottom:          16px;
+    transition:             all 0.15s ease-in-out;
+}
+
+.footerMenuSection a:hover{
+    color:                  #FF6F00;
+}
+
+.footerText{
+    margin-top:             16px;
+    margin-left:            88px;
+    width:                  90%;
+}
+
+.footerIcon{
+    display:                inline;
+    margin-top:             8px;
+}
+
+.footerContactSection{
+    display:                flex;
+    flex-direction:         column;
+    gap:                    16px;
+}
+
+.footerContactSection div{
+    display:                flex;
+    justify-content:        center;
+    align-items:            center;
+    gap:                    16px;
+    align-items:            flex-start;
+}
+
+@media screen and (max-width: 1400px){
+    .mobileFooterHeader{
+        display:                block;
+    }
+
+    h6{
+        font-size:              1.25rem;
+    }
+
+    .footerLogoText{
+        font-size:              1.25rem;
+    }
+    
+    .footerMenuSection a{
+        font-size:              1rem;
+        font-weight:            300;
+        color:                  var(--white);
+        margin-bottom:          8px;
+        transition:             all 0.15s ease-in-out;
+    }
+        
+    .footerContactInfo{
+        font-size:              1rem;
+    }
+    
+    .footerIcon{
+        width:                  16px;
+        margin-top:             6px;
+    }
+
+    .footerLogo{
+        width:                  64px;
+        margin-top:             -16px;
+    }
+
+    .footerLogoText{
+        font-size:              1.25rem;
+        margin-left:            -8px;
+    }
+
+    .footerText{
+        font-size:              1rem;
+        margin-left:            24px;
+        margin-top:             0;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .navItems{
+        display:                flex;
+        gap:                    2vw;
+    }
+
+    .navItem{
+        font-size:              1.2rem;
+        font-weight:            300;
+        position:               relative;
+    }
+    
+    .navbarLogoImg{
+        width:                  40px;
+    }
+
+    .navbarLogoImg img{
+        width:                  40px;
+    }
+
+    .navbarLogoText{
+        font-size:              1.5rem;
+        font-weight:            400;
+    }
+
+    h6{
+        font-size:              1.5rem;
+    }
+
+    footer{
+        display:                flex;
+        flex-direction:         column;
+        justify-content:        center;
+        align-items:            center;  
+        gap:                    32px;
+    }
+
+    .footerSection:first-of-type div{
+        justify-content:        center;
+        align-items:            center;
+        width:                  100%;
+        padding:                0 32px;
+        margin-left:            -16px;
+        max-width:              none;
+    }
+
+    .footerText{
+        margin:                 -8px auto 0;
+        width:                  75%;
+        text-align:             center;
+    }
+
+    .footerContactSection{
+        padding:                0 32px;
+        justify-content:        center;
+        align-items:            center;
+    }
+}
+
+@media screen and (max-width: 900px){
+    nav{
+        height:                 80px;
+        backdrop-filter:        blur(2px);
+    }
+    
+    .navbar{
+        width:                  90vw;
+    }
+
+    .navItems{
+        margin-right:           -104px;
+    }
+
+    .navItem{
+        font-size:              1rem;
+        font-weight:            300;
+        position:               relative;
+    }
+    
+    .navbarLogoImg{
+        width:                  32px;
+    }
+
+    .navbarLogoImg img{
+        width:                  32px;
+    }
+
+    .navbarLogoText{
+        font-size:              1.2rem;
+        margin-top:             -2px;
+        margin-left:            -4px;
+    }
+
+    .callNowIcon{
+        display:                none;
+    }
+
+    .footerContactInfo{
+        text-align:             center;
+    }
+
+    footer{
+        padding-top: 64px;
+        margin-top:             120px;
+    }
+
+    .navItem::after, h6::after{
+        height:                 2px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    nav{
+        height:                 64px;
+    }
+
+    .navbar{
+        width:                  90vw;
+    }
+
+    .navItems{
+        margin-right:           0;
+    }
+
+    .navItem{
+        font-size:              1rem;
+        font-weight:            300;
+        position:               relative;
+    }
+    
+    .navbarLogoImg{
+        width:                  20px;
+    }
+
+    .navbarLogoImg img{
+        width:                  20px;
+    }
+
+    .navbarLogoText{
+        font-size:              1rem;
+        margin-top:             -2px;
+        margin-left:            -6px;
+    }
+
+    .callNowGroup{
+        display:                none;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    html{
+        font-size:              12px;
+    }
+
+    h6{
+        font-size:              1.1rem;
+        margin-bottom:          12px;
+    }
+    
+    .navItem{
+        font-size:              1.1rem;
+        border-right:           1px solid transparent;
+        padding-right:          6px;
+        transition:             all .3s ease-in-out;
+    }
+    
+    .navItem:last-of-type{
+        font-size:              1rem;
+        border-right:           1px solid transparent;
+        padding-right:          0;
+    }
+    
+    .navbarLogoImg{
+        width:                  16px;
+    }
+
+    .navbarLogoImg img{
+        width:                  16px;
+    }
+
+    .navbarLogoText{
+        font-size:              1.3rem;
+        margin-top:             -2px;
+    }
+
+    .footerLogo{
+        width:                  40px;
+    }
+
+    .footerLogoText{
+        margin-left:            0;
+        font-size:              1.2rem;
+    }
+
+    .footerText{
+        width:                  80%;
+        text-align:             center;
+        margin-top:             2px;
+    }
+    
+    .footerMenuSection a{
+        margin-bottom:          4px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .navItem{
+        font-size:              1rem;
+    }
+    
+    .navbarLogoImg{
+        width:                  14px;
+    }
+
+    .navbarLogoImg img{
+        width:                  14px;
+    }
+
+    .navbarLogoText{
+        font-size:              1.2rem;
+        margin-top:             0;
+    }
+}

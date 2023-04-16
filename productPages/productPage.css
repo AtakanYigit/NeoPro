@@ -1,0 +1,284 @@
+.container{
+    position:               relative;
+    width:                  90vw;
+    left:                   0;
+    right:                  0;
+    margin:                 148px auto 0;
+    display:                flex;
+    justify-content:        space-between;
+    gap:                    3vw;
+}
+
+.textContainer{
+    text-align:             left;
+    display:                flex;
+    flex-direction:         column;
+}
+
+.productImageContainerOuter{
+    position:               relative;
+    width:                  calc(32.5vw + 8px);
+    height:                 calc(40vw + 8px);
+    overflow:               visible;
+    display:                grid;
+    overflow:               none;
+    background-color:       black;
+}
+
+.productImageContainerOuter::after{
+    content:                "";
+    position:               absolute;
+    width:                  8px;
+    height:                 8px;
+    left:                   0;
+    top:                    0;
+    background-color:       var(--orange);
+    z-index:                99;
+}
+
+.productImageContainerInner{
+    width:                  calc(32.5vw + 8px);
+    height:                 calc(40vw + 8px);
+    overflow:               hidden;
+    display:                flex;
+    justify-content:        center;
+    align-items:            center;
+}
+
+.productImage{
+    min-width:              100%;
+    min-height:             100%;
+    object-fit:             cover;
+    grid-column:            1;
+    grid-row:               1;
+}
+
+h1{
+    margin-top:            -16px;
+    font-size:              3.5rem;
+    font-weight:            500;
+}
+
+h2{
+    margin-top:             32px;
+    font-size:              2.25rem;
+    font-weight:            600;
+    text-align:             center;
+}
+
+.productInfo{
+    font-size:              1.5rem;
+    font-weight:            400;
+    width:                  100%;
+    min-width:              54vw;
+}
+
+#border{
+    position:               absolute;
+    stroke-dasharray:       0;
+    stroke-dashoffset:      0;
+    animation:              borderAnimation 1.4s ease-in-out forwards;
+    box-shadow:             0 0 32px hsla(26, 99%, 55%, 0.16);
+    grid-column:            1;
+    grid-row:               1;
+}
+
+#border:hover{
+    box-shadow:             0 0 32px hsla(26, 99%, 55%, 0.32);
+}
+
+@keyframes borderAnimation{
+    from{
+        stroke-dasharray:   80vw;
+        stroke-dashoffset:  80vw;
+    }
+
+    to{
+        stroke-dasharray:   200vw;
+        stroke-dashoffset:  0px;
+    }
+}
+
+footer{
+    margin-top:         0!important;
+}
+
+.gallery{
+    position:           relative;
+    width:              90vw;
+    margin:             32px auto 128px;
+    display:            flex;
+    flex-wrap:          wrap;
+    justify-content:    space-between;
+    align-items:        center;
+    gap:                32px 16px;
+}
+
+.gallery .galleryImageContainer{
+    display:            block;
+    width:              15vw;
+    max-height:         20vw;
+    overflow:           hidden;
+    display:            flex;
+    justify-content:    center;
+    align-items:        center;
+    transition:         all 0.3s ease-in-out;
+    position:           relative;
+} 
+
+.gallery .galleryImageContainer::after{
+    content:            "";
+    position:           absolute;
+    width:              100%;
+    height:             100%;
+    left:               0;
+    top:                0;
+    background-color:   var(--orange);
+    opacity:            0;
+    transition:         opacity 0.3s ease-in-out;
+    z-index:            99;
+} 
+
+.gallery .galleryImageContainer:hover{
+    transform:          translateY(-6px) scale(1.04);
+} 
+
+.gallery .galleryImageContainer:hover::after{
+    opacity:            .05;
+} 
+
+.gallery .galleryImageContainer img{
+    object-fit:         cover;
+    max-width:          100%;
+} 
+
+@media screen and (max-width: 1500px){
+    h1{
+        font-size:              2.5rem;
+    }
+
+    h2{
+        margin-top:             32px;
+        font-size:              2rem;
+        font-weight:            600;
+        text-align:             center;
+    }
+
+    .productInfo{
+        font-size:              1.25rem;
+    }
+
+    .gallery{
+        margin:             16px auto 80px;
+    }
+        
+    .gallery .galleryImageContainer{
+        width:              16vw;
+        max-height:         21vw;
+    } 
+}
+
+@media screen and (max-width: 900px){
+    .container{
+        flex-direction:         column;
+        width:                  80vw;
+        gap:                    3vw;
+    }
+    
+    .productImageContainerOuter{
+        width:                  calc(32.5vw + 8px);
+        height:                 calc(40vw + 8px);
+        margin:                 0 auto;
+    }
+    
+    .productImageContainerInner{
+        width:                  calc(32.5vw + 8px);
+        height:                 calc(40vw + 8px);
+        overflow:               hidden;
+        display:                flex;
+        justify-content:        center;
+        align-items:            center;
+    }
+
+    h1{
+        text-align:             center;
+    }
+        
+    h2{
+        margin-top:             32px;
+        font-size:              2.25rem;
+        font-weight:            600;
+        text-align:             center;
+    }
+        
+    .gallery{
+        width:              80vw;
+        gap:                1vw 2vw;
+    }
+
+    .gallery .galleryImageContainer{
+        width:              24vw;
+        max-height:         30vw;
+    } 
+}
+
+@media screen and (max-width: 640px){    
+    h1{
+        margin-top:         0px;
+    }     
+
+    .container{
+        margin-top:             88px;
+    }
+    
+    .productImageContainerOuter{
+        width:                  calc(60vw + 8px);
+        height:                 calc(73.84vw + 8px);
+    }
+    
+    .productImageContainerInner{
+        width:                  calc(60vw + 8px);
+        height:                 calc(73.84vw + 8px);
+    }
+
+    svg{
+        width:                  calc(60vw + 8px);
+        height:                 calc(73.84vw + 8px);
+    }
+
+    svg rect{
+        width:                  60vw;
+        height:                 73.84vw;
+        stroke-width:           8px;
+    }
+        
+    @keyframes borderAnimation{
+        from{
+            stroke-dasharray:   80vw;
+            stroke-dashoffset:  80vw;
+        }
+
+        to{
+            stroke-dasharray:   270vw;
+            stroke-dashoffset:  0px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .container{
+        gap:                    0;
+    }
+    
+    h1{
+        margin-top:             16px;
+    }
+
+    h2{
+        margin-top:             16px;
+        font-size:              2.25rem;
+        font-weight:            600;
+        text-align:             center;
+    }
+}
