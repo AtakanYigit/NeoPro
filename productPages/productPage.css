@@ -13,6 +13,7 @@
     text-align:             left;
     display:                flex;
     flex-direction:         column;
+    border-radius:          4px;
 }
 
 .productImageContainerOuter{
@@ -23,6 +24,7 @@
     display:                grid;
     overflow:               none;
     background-color:       black;
+    border-radius:          4px;
 }
 
 .productImageContainerOuter::after{
@@ -34,6 +36,7 @@
     top:                    0;
     background-color:       var(--orange);
     z-index:                99;
+    border-radius:          4px;
 }
 
 .productImageContainerInner{
@@ -43,6 +46,7 @@
     display:                flex;
     justify-content:        center;
     align-items:            center;
+    border-radius:          4px;
 }
 
 .productImage{
@@ -51,6 +55,7 @@
     object-fit:             cover;
     grid-column:            1;
     grid-row:               1;
+    border-radius:          4px;
 }
 
 h1{
@@ -61,16 +66,18 @@ h1{
 
 h2{
     margin-top:             32px;
+    margin-bottom:          8px;
     font-size:              2.25rem;
     font-weight:            600;
-    text-align:             center;
+    text-align:             left;
 }
 
 .productInfo{
-    font-size:              1.5rem;
+    font-size:              1.6rem;
     font-weight:            400;
     width:                  100%;
     min-width:              54vw;
+    margin-top:             8px;
 }
 
 #border{
@@ -81,6 +88,8 @@ h2{
     box-shadow:             0 0 32px hsla(26, 99%, 55%, 0.16);
     grid-column:            1;
     grid-row:               1;
+    transition:             all 0.3s ease-in-out;
+    border-radius:          4px;
 }
 
 #border:hover{
@@ -124,6 +133,7 @@ footer{
     align-items:        center;
     transition:         all 0.3s ease-in-out;
     position:           relative;
+    border-radius:          4px;
 } 
 
 .gallery .galleryImageContainer::after{
