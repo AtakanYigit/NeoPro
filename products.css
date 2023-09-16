@@ -113,6 +113,10 @@ p{
         display:                block;
     }
 
+    h2{
+        margin-top:             0;
+    }
+
     .container{
         margin:                 16px auto 0;
         width:                  80vw;

@@ -115,7 +115,7 @@ footer{
 .gallery{
     position:           relative;
     width:              90vw;
-    margin:             32px auto 128px;
+    margin:             40px auto 128px;
     display:            flex;
     flex-wrap:          wrap;
     justify-content:    space-between;
@@ -222,19 +222,20 @@ footer{
     }
         
     .gallery{
-        width:              80vw;
-        gap:                1vw 2vw;
+        width:                  80vw;
+        gap:                    1vw 2vw;
+        margin-top:             32px;
     }
 
     .gallery .galleryImageContainer{
-        width:              24vw;
-        max-height:         30vw;
+        width:                  24vw;
+        max-height:             30vw;
     } 
 }
 
 @media screen and (max-width: 640px){    
     h1{
-        margin-top:         0px;
+        margin-top:             0px;
     }     
 
     .container{

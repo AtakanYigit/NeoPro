@@ -46,7 +46,7 @@
             </div>
         </nav>
 
-        <a id = "languageButton" href=""><p id = "languageButtonText" href = "">En</p></a>
+        <!-- <a id = "languageButton" href=""><p id = "languageButtonText" href = "">En</p></a> -->
         
         <header>
             <video onclick = "videoPlayPause()" id = "mainVideo" poster = "Media/MainPage/Pic1.png" preload = "auto" nocontrols autoplay loop>   <!-- muted --> 
@@ -56,10 +56,10 @@
             <img onclick = "videoPlayPause()" class = "playButton fadeOut" src = "Media/MainPage/Play Button.png" alt = "Play Button">
             <div class = "imageWrapper">
                 <div class = "slide">
-                    <img class = "sliderImage" src = "Media/MainPage/Pic1.png" alt = "">
-                    <img class = "sliderImage" src = "Media/MainPage/Pic1.png" alt = "">
-                    <img class = "sliderImage" src = "Media/MainPage/Pic1.png" alt = "">
-                    <img class = "sliderImage" src = "Media/MainPage/Pic1.png" alt = "">
+                    <img class = "sliderImage" src = "Media/Slider/1.jpg"  alt = "">
+                    <img class = "sliderImage" src = "Media/Slider/2.jpg"  alt = "">
+                    <img class = "sliderImage" src = "Media/Slider/3.jpeg" alt = "">
+                    <img class = "sliderImage" src = "Media/Slider/4.jpeg" alt = "">
                 </div>
                 <div class = "sliderButtons">
                     <span onclick = "slidePrevious()" class = "sliderButton buttonLeft"><img   src = "Media/MainPage/Arrow Left.png" alt = "Previous"></span>
@@ -75,53 +75,35 @@
                 <br>Yeni ürün geliştirmeyi ve teknolojik ilerlemeleri şirket politikası olarak benimseyen promaks 2014 yılının başından itibaren neo pro markasıyla patentli yeni nesil dijital kontrollü elektrostatik toz boyama makinalarını müşterilerinin hizmetine sunmuştur. 2019 yılından bu yana plastik hızlı renk değişim kabinleri ve boya merkezi uygulaması olarak komple çözümler sunmaktadır. </p>
             </section>
 
-            <section>
-                <h1>Header</h1>
-                <div class="sectionContainer">
-                    <video width = "700" controls>
-                        <source src = "Media/MainPage/Video.mp4" type = "video/mp4">
-                        Your browser does not support the video tag.
-                    </video>    
-                    <p>Lorem ipsum dolor sit amet cos adipiscing elit. Praesent at al lor ipsum dolor sit amet tetur adip elit. Praesent at alaad lorem dol sit amet consectetur adipiscing elit. Praesent at alaad lor dolor Praesent at al lor ipsum dolor sit amet tetur adip elit.</p>
-                </div>
+            <h1>Videolarımız</h1>
+            <section class = "videosContainer">
+                <video width = "700" controls>
+                    <source src = "Media/Videos/1.mp4" type = "video/mp4">
+                    Your browser does not support the video tag.
+                </video>    
+                <video width = "700" controls>
+                    <source src = "Media/Videos/2.mp4" type = "video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </section>
-            <section>
-                <h1>Header</h1>
-                <div class="sectionContainer">
-                    <video width = "700" controls>
-                        <source src = "Media/MainPage/Video.mp4" type = "video/mp4">
-                        Your browser does not support the video tag.
-                    </video>    
-                    <p>Lorem ipsum dolor sit amet cos adipiscing elit. Praesent at al lor ipsum dolor sit amet tetur adip elit. Praesent at alaad lorem dol sit amet consectetur adipiscing elit. Praesent at alaad lor dolor </p>
-                </div>
-            </section>
-            <section>
-                <h1>Header</h1>
-                <div class="sectionContainer">
-                    <video width = "700" controls>
-                        <source src = "Media/MainPage/Video.mp4" type = "video/mp4">
-                        Your browser does not support the video tag.
-                    </video>    
-                    <p>Lorem ipsum dolor sit amet cos adipiscing elit. Praesent at al lor ipsum dolor sit amet tetur adip elit. Praesent at alaad lorem dol sit amet consectetur adipiscing elit. Praesent at alaad lor dolor Praesent at al lor ipsum dolor sit amet tetur adip elit.</p>
-                </div>
-            </section>
+
             <section>
                 <h1>Ürünlerimiz</h1>
                 <div class = "container">
                     <a class = "productContainer" href = "productPages/plasticCabinSystem.html">
-                        <img class = "productsImage" src = "Media/Products/PlastikKabin.jpeg" alt = "Plastik Kabin">
+                        <img class = "productsImage" src = "Media/Products/PlastikKabinAna.jpeg" alt = "Plastik Kabin">
                         <p class = "productsText">Plastik Kabin</p>
                     </a>
                     <a class = "productContainer" href = "productPages/paintingCenter.html">
-                        <img class = "productsImage" src = "Media/Products/BoyaMerkezi.png" alt = "Boya Merkezi">
+                        <img class = "productsImage" src = "Media/Products/PaintingCenter.jpeg" alt = "Boya Merkezi">
                         <p class = "productsText">Boya Merkezi</p>
                     </a>
                     <a class = "productContainer" href = "productPages/paintingGuns.html">
-                        <img class = "productsImage" src = "Media/Products/Tribo Tabanca Left.jpg" alt = "Tribo Tabanca">
+                        <img style="transform: scaleX(-1)" class = "productsImage" src = "Media/Products/Korona Tabanca.png" alt = "Tribo Tabanca">
                         <p class = "productsText">Boya Tabancaları</p>
                     </a>
                     <a class = "productContainer" href = "productPages/siglon.html">
-                        <img style="transform: scaleX(-1)" class = "productsImage" src = "Media/Products/Korona Tabanca.png" alt = "Corona Tabanca">
+                        <img class = "productsImage" src = "Media/Products/Siglon.jpeg" alt = "Corona Tabanca">
                         <p class = "productsText">Siglon Grubu ve Filtre Hücresi</p>
                     </a>
                     <a class = "productContainer" href = "productPages/powderCoatingRobots.html">
@@ -129,15 +111,15 @@
                         <p class = "productsText">Toz Boya Robotları</p>
                     </a>
                     <a class = "productContainer" href = "productPages/pumpAndInjectorGroups.html">
-                        <img class = "productsImage" src = "Media/Products/Enjektör.jpg" alt = "Pompa ve Enjektör Grupları">
+                        <img class = "productsImage" src = "Media/Products/Pump.jpeg" alt = "Pompa ve Enjektör Grupları">
                         <p class = "productsText">Pompa ve Enjektör Grupları</p>
                     </a>
                     <a class = "productContainer" href = "productPages/sparePart.html">
-                        <img class = "productsImage" src = "Media/Products/Pic1.png" alt = "Yedek Parça">
+                        <img class = "productsImage" src = "Media/Products/SpareParts.jpg" alt = "Yedek Parça">
                         <p class = "productsText">Yedek Parça</p>
                     </a>
                     <a class = "productContainer" href = "productPages/surfaceTreatmentNozzles.html">
-                        <img style = "transform: translateX(-15px)" class = "productsImage" src = "Media/Products/YuzeyIslemProduct.jpeg" alt = "Yüzey İşlem Nozulları">
+                        <img class = "productsImage" src = "Media/Products/SurfaceTreatment Square.jpeg" alt = "Yüzey İşlem Nozulları">
                         <p class = "productsText">Yüzey İşlem Ekipmanları</p>
                     </a>
                 </div>
