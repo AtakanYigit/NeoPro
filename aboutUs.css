@@ -10,7 +10,7 @@ section{
 }
 
 h1{
-    font-size:              5rem;
+    font-size:              4rem;
     font-weight:            500;
 }
 
@@ -21,7 +21,17 @@ h2{
 
 p{
     margin-top:             24px;
-    font-size:              2rem;
+    font-size:              1.6rem;
+    font-weight:            300;
+}
+
+ul{
+    margin-top:             24px;
+}
+
+li{
+    list-style-type:        decimal;
+    font-size:              1.6rem;
     font-weight:            300;
 }
 
