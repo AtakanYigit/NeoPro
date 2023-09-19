@@ -48,7 +48,8 @@
     width:                  580px;
     height:                 318px;
     right:                  7vw;
-    bottom:                 3vh;
+    top:                    58vh;
+    top:                    clamp(160px, 58vh, 630px);
     overflow:               hidden;
     border:                 10px solid var(--white);
 }
@@ -152,11 +153,18 @@ p{
 /*Videos*/
 .videosContainer{
     width:                  80vw;
+    left:                   0;
+    right:                  0;
     margin:                 32px auto 0;
-    display:                flex;
-    flex-wrap:              wrap;
     gap:                    32px;
-    justify-content:        space-between;
+    display:                flex;
+    justify-content:        stretch;
+    align-items:            flex-start;
+    flex-wrap:              nowrap;
+}
+
+.videosContainer video{
+    height:                 18.33vw;
     border-radius:          4px;
 }
 
@@ -246,30 +254,10 @@ p{
 
     /* ---Slider--- */
     .imageWrapper{
-        width:                  406px;
-        height:                 222px;
-        right:                  6vw;
-        top:                    40vw;
-        border:                 8px solid var(--white);
-    }
-
-    .sliderImage{
-        width:                  442px;
-        height:                 242px;
-    }
-
-    .sliderButton img{
-        width:                  48px;
-    }
-
-    .sliderButton{
-        width:                  80px;
-        height:                 70px;
-        margin-top:             -100px;
-    }
-
-    .buttonLeft{
-        right:                  88px;
+        transform-origin:       top center;
+        scale:                  .8;
+        right:                  0;
+        top:                    clamp(160px, 38vh, 530px);
     }
 
     /* ---Sections--- */
@@ -336,8 +324,7 @@ p{
     /* ---Main Video--- */
     #mainVideo{
         margin:                 0 auto 0 auto;
-        width:                  120vw;
-        margin-left:            -10vw;
+        width:                  100vw;
     }
 
     .playButton{
@@ -348,38 +335,11 @@ p{
 
     /* ---Slider--- */
     .imageWrapper{
-        width:                  60vw;
-        height:                 33vw;
-        right:                  3vw;
-        top:                    53vw;
-        border:                 6px solid var(--white);
-    }
-
-    .sliderImage{
-        width:                  60vw;
-        min-width:              60vw;
-        height:                 33vw;
-    }
-
-    .sliderButton img{
-        width:                  32px;
-    }
-
-    .sliderButton{
-        width:                  48px;
-        height:                 48px;
-        margin-top:             0;
-    }
-
-    .buttonLeft{
-        right:                  auto;
-        bottom:                 8px;
-        padding-left:           6px;
-    }
-
-    .buttonRight{
-        bottom:                 8px;
-        padding-left:           8px;
+        scale:                  .8;
+        right:                  0;
+        left:                   0;
+        top:                    40vw;
+        margin:                 0 auto;
     }
 
     /* ---Sections--- */
@@ -421,6 +381,19 @@ p{
         width:                  100%;
     }
 
+    /* ---Videos--- */
+    .videosContainer{
+        flex-direction:         column;
+        justify-content:        center;
+        gap:                    16px;
+        margin:                 0 auto;
+    }
+
+    .videosContainer video{
+        width:                  100%;
+        height:                 auto
+    }
+
     /* ---Products--- */
     .container{
         padding-top:            8px;
@@ -452,4 +425,48 @@ p{
         width:                  calc(40vw - 16px);
         transform:              translateY(-10%);
     }    
+}
+
+@media screen and (max-width: 640px){
+    .imageWrapper{
+        scale:                  .5;
+        top:                    40vw;
+    }
+
+    .firstSectionHeader{
+        margin:                 112px auto 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .imageWrapper{
+        scale:                  .4;
+        top:                    45vw;
+        left:                   -52px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .imageWrapper{
+        left:                   -72px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .imageWrapper{
+        top:                    44vw;
+        left:                   -88px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .imageWrapper{
+        left:                   -92px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .imageWrapper{
+        left:                   -96px;
+    }
 }
